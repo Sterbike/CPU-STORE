@@ -1,7 +1,8 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-
+const dbConnect = require("./middlewares/dbConnection");
+dbConnect();
 const PORT = process.env.PORT || 3500;
 
 app.get("/", (req, res) => {
